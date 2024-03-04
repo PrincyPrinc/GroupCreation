@@ -81,7 +81,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const CustomContainer(
               heading1: 'Basic Information',
-              heading2: '',
             ),
             const SizedBox(
               height: 15,
@@ -272,7 +271,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const CustomContainer(
               heading1: 'Add friends',
-              heading2: '',
             ),
             MyListView(
               arrayData: Maps,
@@ -296,7 +294,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         Icon(
                           Icons.add,
                           color: Colors.white,
-                        
                         ),
                         Text(
                           'Create Group',
