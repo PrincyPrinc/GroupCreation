@@ -18,7 +18,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String? _selectedOption;
-  List<String> _options = ['Friends', ' Work', 'Study'];
+  List<String> _options = ['Friends', 'Work', 'Study'];
   TextEditingController textEditingController = TextEditingController();
   List<bool> isSelected = List.generate(10, (index) => false);
 
@@ -106,8 +106,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15),
                         decoration: InputDecoration(
-                          border: InputBorder.none,
-                        ),
+                            border: InputBorder.none,
+                            contentPadding:
+                                EdgeInsets.only(left: 15, bottom: 12)),
                       )),
                   const SizedBox(
                     height: 15,
@@ -142,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                       decoration: const InputDecoration(
                           // labelText: 'Select an option',
-                          contentPadding: EdgeInsets.only(bottom: 4, right: 5),
+                          contentPadding: EdgeInsets.only(bottom: 7, left: 15),
                           border: InputBorder.none,
                           enabledBorder: InputBorder.none,
                           labelStyle: TextStyle(color: Colors.black)),
@@ -174,10 +175,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                     borderType: BorderType.RRect,
                     radius: const Radius.circular(12),
-                    //padding: EdgeInsets.all(6),
                     child: const InputContainer(
                         child: Center(
                       child: Text(
+                        // textAlign: TextAlign.center,
                         'UPLOAD IMAGE',
                         style: TextStyle(
                           fontSize: 18,
@@ -223,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
             const CustomContainer(heading1: 'Selected Friends', heading2: '2'),
             Container(
@@ -266,6 +267,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
             const CustomContainer(
               heading1: 'Add friends',
               heading2: '',
@@ -292,6 +296,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Icon(
                           Icons.add,
                           color: Colors.white,
+                        
                         ),
                         Text(
                           'Create Group',
